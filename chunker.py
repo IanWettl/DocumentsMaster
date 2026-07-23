@@ -2,9 +2,10 @@
 Step 1: Walk a folder, extract text from files, split into overlapping chunks.
 """
 import os
-
+import logging
+logging.getLogger("pypdf").setLevel(logging.ERROR)
 # --- config ---
-SCOPE_DIR = os.path.expanduser("~/Documents")
+SCOPE_DIR = r"C:\Users\ianwe\OneDrive\Documents"
 SKIP_DIRS = {".git", "node_modules", "__pycache__", ".DS_Store"}
 SKIP_EXTENSIONS = {".pem", ".key", ".env"}
 ALLOWED_EXTENSIONS = {".txt", ".md", ".py", ".cpp", ".h", ".csv", ".json"}
